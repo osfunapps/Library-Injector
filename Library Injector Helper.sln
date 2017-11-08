@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library Injecter", "Library Injecter.vcxproj", "{41C51BA8-15C1-43E6-925F-4EAAF275F582}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library Injector Helper", "..\Library Injector Helper\Library Injecter.vcxproj", "{41C51BA8-15C1-43E6-925F-4EAAF275F582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
