@@ -26,6 +26,7 @@ namespace Library_Injecter
         {
             libraryFileTB.Text = Settings.Default.libraryFilePath;
             projectsRootTB.Text = Settings.Default.projectsRoot;
+            versionTB.Text = Settings.Default.newVersionName;
         }
 
         private void outputFolderDialog_HelpRequest(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace Library_Injecter
                 return;
             }
             FilesInjecter filesInjecter = new FilesInjecter();
-            filesInjecter.AlterFiles(this, outputRTB, projectsRootTB.Text, libraryFileTB.Text);
+            filesInjecter.AlterFiles(this, outputRTB, projectsRootTB.Text, libraryFileTB.Text, versionTB.Text);
             //filesInjecter.AlterFiles("C:\\search here\\entries", "C:\\search here\\generalremotelib-release.aar");
         }
 

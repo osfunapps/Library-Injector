@@ -46,5 +46,17 @@ namespace Library_Injector.Properties {
                 this["libraryFilePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string newVersionName {
+            get {
+                return ((string)(this["newVersionName"]));
+            }
+            set {
+                this["newVersionName"] = value;
+            }
+        }
     }
 }

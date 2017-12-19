@@ -8,35 +8,37 @@ namespace Library_Injecter
 {
     internal class FilesInjecter
     {
-        private static string cppScript = "\"" + Directory.GetCurrentDirectory() + "\\cpp script files\\" + "Library Injecter Helper.exe\"";
+        private static string cppScript = "\"" + Directory.GetCurrentDirectory() + "\\cpp script files\\" + "Library Injector Helper.exe\"";
         private FilesInjecterCallback callback;
 
-        public void AlterFiles(FilesInjecterCallback callback, RichTextBox outputRTB, string projectsRoot, string libraryFilePath)
+        public void AlterFiles(FilesInjecterCallback callback, RichTextBox outputRTB, string projectsRoot, string libraryFilePath, string newVersionName)
         {
             this.callback = callback;
-            SaveParams(projectsRoot, libraryFilePath);
+            SaveParams(projectsRoot, libraryFilePath, newVersionName);
             projectsRoot = FormatString(projectsRoot);
             libraryFilePath = FormatString(libraryFilePath);
-            RunCmd(projectsRoot, libraryFilePath, outputRTB);
+            newVersionName = FormatString(newVersionName);
+            RunCmd(projectsRoot, libraryFilePath, outputRTB, newVersionName);
 
         }
 
-      private void SaveParams(string projectsRoot, string libraryFilePath)
+      private void SaveParams(string projectsRoot, string libraryFilePath, string newVersionName)
         {
             Settings.Default.Upgrade();
             Settings.Default.projectsRoot = projectsRoot;
             Settings.Default.libraryFilePath = libraryFilePath;
+            Settings.Default.newVersionName = newVersionName;
             Settings.Default.Save();
         }
 
 
-        private void RunCmd(string projectRoot, string libraryFilePath, RichTextBox outputRtb)
+        private void RunCmd(string projectRoot, string libraryFilePath, RichTextBox outputRtb, string newVersionName)
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = cppScript;
 
             //project root and then library file path
-            start.Arguments = projectRoot + libraryFilePath;
+            start.Arguments = projectRoot + libraryFilePath + newVersionName;
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
             using (Process process = Process.Start(start))

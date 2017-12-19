@@ -1,4 +1,6 @@
-﻿namespace Library_Injecter
+﻿using System.Drawing;
+
+namespace Library_Injecter
 {
     partial class LibraryForm
     {
@@ -42,7 +44,7 @@
             this.goBtn = new System.Windows.Forms.Button();
             this.pythonPathDialog = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.versionTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.sourcesGB.SuspendLayout();
             this.outputGB.SuspendLayout();
@@ -52,7 +54,7 @@
             // logBtn
             // 
             this.logBtn.AutoSize = true;
-            this.logBtn.Location = new System.Drawing.Point(453, 471);
+            this.logBtn.Location = new System.Drawing.Point(455, 474);
             this.logBtn.Name = "logBtn";
             this.logBtn.Size = new System.Drawing.Size(29, 13);
             this.logBtn.TabIndex = 20;
@@ -150,10 +152,10 @@
             // 
             // outputRTB
             // 
-            this.outputRTB.Enabled = false;
-            this.outputRTB.Location = new System.Drawing.Point(13, 19);
+            this.outputRTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputRTB.Location = new System.Drawing.Point(13, 24);
             this.outputRTB.Name = "outputRTB";
-            this.outputRTB.Size = new System.Drawing.Size(442, 188);
+            this.outputRTB.Size = new System.Drawing.Size(442, 181);
             this.outputRTB.TabIndex = 0;
             this.outputRTB.Text = "";
             this.outputRTB.TextChanged += new System.EventHandler(this.outputRTB_TextChanged);
@@ -175,31 +177,31 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.versionTB);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(13, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(471, 53);
+            this.groupBox1.Size = new System.Drawing.Size(469, 53);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
-            // textBox2
+            // versionTB
             // 
-            this.textBox2.AllowDrop = true;
-            this.textBox2.Location = new System.Drawing.Point(92, 21);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(101, 20);
-            this.textBox2.TabIndex = 14;
+            this.versionTB.AllowDrop = true;
+            this.versionTB.Location = new System.Drawing.Point(92, 21);
+            this.versionTB.Name = "versionTB";
+            this.versionTB.Size = new System.Drawing.Size(89, 20);
+            this.versionTB.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "App Version";
+            this.label2.Text = "Version Name";
             // 
             // LibraryForm
             // 
@@ -239,7 +241,7 @@
         private System.Windows.Forms.Button goBtn;
         private System.Windows.Forms.OpenFileDialog pythonPathDialog;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox versionTB;
         private System.Windows.Forms.Label label2;
     }
 }
