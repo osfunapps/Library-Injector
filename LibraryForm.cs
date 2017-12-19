@@ -102,5 +102,10 @@ namespace Library_Injecter
         {
             libraryFileTB.Text = ((string[])e.Data.GetData(DataFormats.FileDrop, false))[0];
         }
+
+        private void outputRTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

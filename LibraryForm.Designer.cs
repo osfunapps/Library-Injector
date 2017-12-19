@@ -41,14 +41,18 @@
             this.outputRTB = new System.Windows.Forms.RichTextBox();
             this.goBtn = new System.Windows.Forms.Button();
             this.pythonPathDialog = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.sourcesGB.SuspendLayout();
             this.outputGB.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // logBtn
             // 
             this.logBtn.AutoSize = true;
-            this.logBtn.Location = new System.Drawing.Point(453, 492);
+            this.logBtn.Location = new System.Drawing.Point(453, 471);
             this.logBtn.Name = "logBtn";
             this.logBtn.Size = new System.Drawing.Size(29, 13);
             this.logBtn.TabIndex = 20;
@@ -137,9 +141,9 @@
             // outputGB
             // 
             this.outputGB.Controls.Add(this.outputRTB);
-            this.outputGB.Location = new System.Drawing.Point(13, 126);
+            this.outputGB.Location = new System.Drawing.Point(13, 192);
             this.outputGB.Name = "outputGB";
-            this.outputGB.Size = new System.Drawing.Size(471, 311);
+            this.outputGB.Size = new System.Drawing.Size(471, 227);
             this.outputGB.TabIndex = 22;
             this.outputGB.TabStop = false;
             this.outputGB.Text = "Output";
@@ -147,15 +151,16 @@
             // outputRTB
             // 
             this.outputRTB.Enabled = false;
-            this.outputRTB.Location = new System.Drawing.Point(13, 25);
+            this.outputRTB.Location = new System.Drawing.Point(13, 19);
             this.outputRTB.Name = "outputRTB";
-            this.outputRTB.Size = new System.Drawing.Size(442, 269);
+            this.outputRTB.Size = new System.Drawing.Size(442, 188);
             this.outputRTB.TabIndex = 0;
             this.outputRTB.Text = "";
+            this.outputRTB.TextChanged += new System.EventHandler(this.outputRTB_TextChanged);
             // 
             // goBtn
             // 
-            this.goBtn.Location = new System.Drawing.Point(169, 446);
+            this.goBtn.Location = new System.Drawing.Point(168, 425);
             this.goBtn.Name = "goBtn";
             this.goBtn.Size = new System.Drawing.Size(150, 59);
             this.goBtn.TabIndex = 19;
@@ -168,11 +173,40 @@
             this.pythonPathDialog.FileName = "pythonPathDialog";
             this.pythonPathDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.pythonPathDialog_FileOk);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(13, 126);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(471, 53);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Details";
+            // 
+            // textBox2
+            // 
+            this.textBox2.AllowDrop = true;
+            this.textBox2.Location = new System.Drawing.Point(92, 21);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(101, 20);
+            this.textBox2.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "App Version";
+            // 
             // LibraryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 517);
+            this.ClientSize = new System.Drawing.Size(494, 496);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.goBtn);
             this.Controls.Add(this.outputGB);
             this.Controls.Add(this.sourcesGB);
@@ -182,6 +216,8 @@
             this.sourcesGB.ResumeLayout(false);
             this.sourcesGB.PerformLayout();
             this.outputGB.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,6 +238,9 @@
         private System.Windows.Forms.RichTextBox outputRTB;
         private System.Windows.Forms.Button goBtn;
         private System.Windows.Forms.OpenFileDialog pythonPathDialog;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
 
